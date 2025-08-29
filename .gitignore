@@ -1,2 +1,2 @@
 venv
-pyinfra-deubg.log
+deploy/pyinfra-debug.log
