@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libcamera-apps \
      libcamera-dev \
      libcap-dev \
-    python3-libcamera \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
