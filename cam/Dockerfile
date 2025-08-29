@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 balenalib/raspberry-pi-debian:bookworm
+FROM balenalib/raspberry-pi-debian:bookworm
 
 WORKDIR /app
 
