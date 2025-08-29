@@ -1,0 +1,17 @@
+[Unit]
+Description=HomeSec Cam Flask
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User={{ user }}
+WorkingDirectory={{ app_dir }}
+Environment=PYTHONUNBUFFERED=1
+ExecStart={{ venv_dir }}/bin/python {{ app_dir }}/app.py --port {{ port }}
+Restart=always
+RestartSec=3
+# Ensure camera devices are accessible
+SupplementaryGroups=video
+
+[Install]
+WantedBy=multi-user.target
