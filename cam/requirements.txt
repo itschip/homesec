@@ -1,4 +1,3 @@
 Flask==2.3.2
-numpy
-Pillow
-picamera2
+# numpy and Pillow are provided by system python3-picamera2 package
+# picamera2 and libcamera are installed via system packages

@@ -4,10 +4,10 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-User={{ user }}
+User={{ service_user }}
 WorkingDirectory={{ app_dir }}
 Environment=PYTHONUNBUFFERED=1
-ExecStart={{ venv_dir }}/bin/python {{ app_dir }}/app.py --port {{ port }}
+ExecStart=/usr/bin/python3 {{ app_dir }}/app.py
 Restart=always
 RestartSec=3
 # Ensure camera devices are accessible
