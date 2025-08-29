@@ -5,8 +5,11 @@ WORKDIR /app
 # Install camera dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libcamera-apps \
-     libcamera-dev \
-     libcap-dev \
+    libcamera-dev \
+    libcap-dev \
+    python3-libcamera \
+    python3-kms++ \
+    python3-pyqt5 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
